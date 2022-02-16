@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height:100vh;
+    
+}
+
+h1 {
+    text-align: center;
+    margin:0;
+    padding:0;
+}
+
+.container {
+    width: 85%;
+    max-width:1000px;
+    margin: 5vh auto;
+    display: flex;
+    justify-content:center;
+    
+    height:85vh;
+}
+
+img { 
+    max-width: 100%;
+}
+h3 {
+    color: white;
+    display: none;
+}
+.cards {
+    margin:0 0.4rem 0 0.4rem;
+    flex-basis:0;
+    flex-grow: 1;
+    position: relative;
+    background-repeat: no-repeat;
+    overflow:hidden;
+    transition: flex 0.7s ease-in;
+    cursor:pointer;
+    background-size: cover;
+    background-position:center;
+    border-radius:50px;
+}
+
+
+.c1 {
+    
+    background-image: url('https://images.unsplash.com/photo-1536964549204-cce9eab227bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+    
+}
+.c2 {
+    background-image: url('https://images.unsplash.com/photo-1549395156-e0c1fe6fc7a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+
+}
+.c3 {
+    background-image: url('https://images.unsplash.com/photo-1567608286687-394db5f7520a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80');
+
+}
+.c4 {
+    background-image: url('https://images.unsplash.com/photo-1607013251379-e6eecfffe234?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+
+}
+.c5 {
+    background-image: url('https://images.unsplash.com/photo-1562918005-50afb98e5d32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+   
+}
+
+.active {
+    flex-grow:6;
+    min-width: 500px;
+}
+
+.active h3 {
+    position: absolute;
+    display:block;
+    top: 10px;
+    font-size:19px;
+    font-weight: 900;
+    left:20px;
+}
+
+
+@media screen and (max-width:800px) {
+    .c5 {
+        display:none;
+    }
+    .cards { 
+        margin: 0 0.2rem;
+    }
+    .active {
+        min-width:300px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .c4 {
+        display:none;
+    }
+    .active {
+        min-width:100px;
+    }
+    .cards { 
+        margin: 0 0.2rem;
+    }
+}
